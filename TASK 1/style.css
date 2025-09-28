@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.heading {
+  background-color: rgb(26, 26, 58);
+  color: white;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.introduction {
+  background-color: rgb(249, 246, 246);
+  padding: 10px;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.container p {
+  margin-top: 10px;
+}
+
+.about {
+  background-color: lightblue;
+}
+
+.about p {
+  background-color: white;
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.skill {
+  background-color: sandybrown;
+}
+
+.skill p {
+  background-color: white;
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.project {
+  background-color: lightblue;
+}
+
+.project p {
+  background-color: white;
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.contact {
+  background-color: lightgreen;
+}
+
+.contact p {
+  background-color: white;
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.footer {
+  background-color: rgb(26, 26, 58);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
