@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.cards {
+  width: 350px;
+}
+
+.cards img {
+  width: 350px;
+  height: 350px;
+  margin: 0;
+  display: block;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+
+h4 {
+  background-color: orange;
+  font-size: 25px;
+  color: white;
+  font-family: sans-serif;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+}
+
+.cards:hover h4 {
+  border: 2px solid orange;
+  background-color: white;
+  color: orange;
+}
