@@ -75,7 +75,8 @@ main {
 }
 
 .main-left p {
-  margin-top: 10px;
+  margin-top: 20px;
+  color: rgb(67, 67, 67);
   width: 60%;
 }
 
@@ -90,7 +91,8 @@ main {
   border: none;
   background-color: transparent;
   font-size: 14px;
-  font-weight: 600;
+  /* font-weight: 600; */
+  /* color: rgb(67, 67, 67); */
 }
 .main-sections button:nth-child(1) {
   background-color: black;
@@ -144,7 +146,7 @@ main {
 }
 
 .main-popular button {
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 50px;
   border: 1px solid pink;
   outline: none;
@@ -197,12 +199,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
 }
 
-.mid-category p {
+.mid-category h5 {
   font-size: 14px;
-  font-weight: 600;
+  color: rgb(51, 51, 51);
 }
 
 .cards {
