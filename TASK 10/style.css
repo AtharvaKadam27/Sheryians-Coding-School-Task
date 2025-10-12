@@ -48,14 +48,14 @@ nav button {
   border: none;
   outline: none;
   font-size: 18px;
-  background-color: rgb(130, 130, 227);
+  background-color: #0260fe;
   color: white;
 }
 
 nav button:nth-child(1) {
   background-color: white;
-  border: 2px solid rgb(130, 130, 227);
-  color: blue;
+  border: 2px solid #0260fe;
+  color: #0260fe;
   margin-right: 10px;
 }
 
@@ -89,14 +89,14 @@ header .left {
   outline: none;
   font-size: 20px;
   margin-right: 10px;
-  background-color: rgb(130, 130, 227);
+  background-color: #0260fe;
   color: white;
 }
 
 .btn-container button:nth-child(2) {
   background-color: white;
-  border: 2px solid blue;
-  color: blue;
+  border: 2px solid #0260fe;
+  color: #0260fe;
 }
 
 .right p {
@@ -110,7 +110,7 @@ header .left {
   background-size: cover;
   height: 80vh;
   border-radius: 50px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .section2 {
@@ -136,4 +136,429 @@ header .left {
   margin: auto;
   font-weight: 100;
   color: rgb(177, 177, 177);
+}
+
+.section3 {
+  height: 85vh;
+  border-radius: 50px;
+  margin-top: 50px;
+  display: flex;
+  padding: 50px;
+  background-color: rgb(247, 244, 244);
+}
+
+.left3 {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left3 button {
+  padding: 15px 20px;
+  border: 1px solid black;
+  font-size: 18px;
+  background-color: transparent;
+  width: 160px;
+  border-radius: 50px;
+}
+
+.left3 h2 {
+  font-size: 45px;
+  font-weight: 100;
+}
+.left3 p {
+  font-size: 24px;
+  color: gray;
+  margin-top: 30px;
+}
+
+.right3 {
+  width: 45%;
+  background-image: url(https://images.pexels.com/photos/20101088/pexels-photo-20101088.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  margin: 0px 0px 0px 100px;
+}
+
+.section4 {
+  margin-top: 100px;
+}
+
+.section4 button {
+  padding: 15px 20px;
+  border: 1px solid black;
+  font-size: 18px;
+  background-color: transparent;
+  width: 160px;
+  border-radius: 50px;
+}
+
+.section4 .exp-text {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section4 h1 {
+  font-size: 45px;
+  font-weight: 100;
+}
+
+.section4 p {
+  font-size: 20px;
+  padding-left: 80px;
+  padding-top: 10px;
+  color: gray;
+}
+
+.section5 {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section5 .cards {
+  background-image: url(https://images.pexels.com/photos/32470426/pexels-photo-32470426.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  height: 500px;
+  width: 23.5%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cards .wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #0260fe;
+  color: white;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+.wrapper h1 {
+  font-weight: 100;
+}
+
+.wrapper p {
+  font-size: 20px;
+  color: rgb(208, 207, 207);
+}
+
+.wrapper i {
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid white;
+  margin-right: 10px;
+}
+
+.cards:hover .wrapper {
+  opacity: 1;
+}
+
+.cards:nth-child(2) {
+  background-image: url(https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg);
+}
+.cards:nth-child(3) {
+  background-image: url(https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg);
+}
+.cards:nth-child(4) {
+  background-image: url(https://images.pexels.com/photos/8871884/pexels-photo-8871884.jpeg);
+}
+.cards:nth-child(5) {
+  background-image: url(https://images.pexels.com/photos/19989608/pexels-photo-19989608.jpeg);
+}
+.cards:nth-child(6) {
+  background-image: url(https://images.pexels.com/photos/30975982/pexels-photo-30975982.jpeg);
+}
+.cards:nth-child(7) {
+  background-image: url(https://images.pexels.com/photos/6077567/pexels-photo-6077567.jpeg);
+}
+.cards:nth-child(8) {
+  background-image: url(https://images.pexels.com/photos/15692692/pexels-photo-15692692.jpeg);
+}
+
+.section6 {
+  margin-top: 100px;
+  padding: 40px;
+  background-color: rgb(247, 244, 244);
+  border-radius: 20px;
+}
+
+.section6 .mile-heading button {
+  padding: 15px 20px;
+  border: 1px solid black;
+  font-size: 18px;
+  background-color: transparent;
+  width: 160px;
+  border-radius: 50px;
+}
+
+.mile-heading .exp-text {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mile-heading h1 {
+  font-size: 45px;
+  width: 48%;
+
+  font-weight: 100;
+}
+
+.mile-heading p {
+  font-size: 20px;
+  width: 48%;
+  color: gray;
+}
+
+.mile-cover {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 80vh;
+  width: 100%;
+}
+
+.left6 {
+  width: 48%;
+  background-image: url(https://images.pexels.com/photos/926390/pexels-photo-926390.jpeg);
+  height: 100%;
+  background-position: left;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.right6 {
+  width: 48%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.road {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.road-bulb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.road-bulb i {
+  font-size: 25px;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  background-color: rgb(193, 192, 192);
+}
+
+.road-bulb .percentage {
+  background-color: rgb(215, 215, 215);
+  height: 130px;
+  width: 3px;
+}
+
+.percentage .inner-percentage {
+  height: 70%;
+  width: 100%;
+  background-color: #0260fe;
+}
+
+.road-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0px;
+}
+
+.road-text h4 {
+  color: rgb(173, 173, 173);
+  font-size: 20px;
+}
+
+.road-text h1 {
+  font-weight: 100;
+  color: rgb(99, 99, 99);
+}
+
+.road-text p {
+  font-size: 20px;
+  color: gray;
+}
+
+.road-text h5 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.road:nth-child(1) .road-text h4 {
+  color: #0260fe;
+}
+.road:nth-child(1) .road-text h1 {
+  color: black;
+}
+
+.road:nth-child(1) .road-bulb i {
+  background-color: #0260fe;
+}
+
+.section7 {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left7 {
+  width: 48%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.right7 {
+  width: 48%;
+  background-image: url(https://images.unsplash.com/photo-1698510047345-ff32de8a3b74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbiUyMGZhY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.test-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.test-head i {
+  font-size: 25px;
+  color: #0260fe;
+}
+
+.left7 p {
+  font-size: 22px;
+  color: rgb(35, 35, 35);
+}
+
+.left7 h5 {
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.left7 span {
+  margin-left: 18px;
+  color: gray;
+}
+
+footer {
+  padding: 50px;
+  background-color: rgb(23, 23, 23);
+  color: rgb(201, 201, 201);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+}
+
+.logo-footer img {
+  height: 70px;
+  width: 70px;
+}
+
+.footer-mid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscribe p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.subscribe input {
+  padding: 15px 25px;
+  background-color: rgb(72, 72, 72);
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  width: 250px;
+  font-size: 18px;
+}
+
+.subscribe button {
+  padding: 15px 25px;
+  background-color: #0260fe;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+}
+
+.quick-links h4 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.quick-links p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.connect-with h4 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.connect-with p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.developers h4 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.developers p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot-links i {
+  font-size: 25px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 10px;
 }
