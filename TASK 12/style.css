@@ -189,6 +189,7 @@ main section.view3 .bottom .text .paragraphs p {
 }
 main .team {
   width: 100%;
+  max-width: 2000px;
 }
 main .team h1 {
   font-size: 3rem;
@@ -398,7 +399,7 @@ main section.view7 .bottom .foot h3 span {
 @media (min-width: 1000px) {
   main section.view1 {
     flex-direction: row;
-    font-size: 1vw;
+    font-size: 1rem;
   }
   main section.view1 .top,
   main section.view1 .bottom {
@@ -409,11 +410,11 @@ main section.view7 .bottom .foot h3 span {
     padding: 3.3rem;
   }
   main section.view1 .bottom .text h1 {
-    font-size: 3.5em;
+    font-size: clamp(2rem, 3vw, 4.5rem);
     width: 80%;
   }
   main section.view1 .bottom .text p {
-    font-size: 1.5em;
+    font-size: clamp(1em, 1vw, 1.5em);
   }
   main .reach {
     width: 100%;
@@ -429,7 +430,7 @@ main section.view7 .bottom .foot h3 span {
   }
   main section.view2 {
     flex-direction: row-reverse;
-    font-size: 1vw;
+    font-size: 1rem;
   }
   main section.view2 .top,
   main section.view2 .bottom {
@@ -440,7 +441,7 @@ main section.view7 .bottom .foot h3 span {
     padding: 3.3rem;
   }
   main section.view2 .bottom .text h1 {
-    font-size: 3em;
+    font-size: clamp(2rem, 3vw, 4.5rem);
     width: 80%;
   }
   main section.view2 .bottom .text .paragraphs {
@@ -448,11 +449,11 @@ main section.view7 .bottom .foot h3 span {
     gap: 1em;
   }
   main section.view2 .bottom .text .paragraphs p {
-    font-size: 1.2em;
+    font-size: clamp(0.6em, 0.9vw, 1.2em);
   }
   main section.view3 {
     flex-direction: row;
-    font-size: 1vw;
+    font-size: 1rem;
   }
   main section.view3 .top,
   main section.view3 .bottom {
@@ -463,7 +464,7 @@ main section.view7 .bottom .foot h3 span {
     padding: 3.3rem;
   }
   main section.view3 .bottom .text h1 {
-    font-size: 3em;
+    font-size: clamp(2rem, 3vw, 4.5rem);
     width: 80%;
   }
   main section.view3 .bottom .text .paragraphs {
@@ -471,7 +472,7 @@ main section.view7 .bottom .foot h3 span {
     gap: 1em;
   }
   main section.view3 .bottom .text .paragraphs p {
-    font-size: 1.2em;
+    font-size: clamp(0.6em, 0.9vw, 1.2em);
     width: 50%;
   }
   main section.view4 {
@@ -483,7 +484,7 @@ main section.view7 .bottom .foot h3 span {
   }
   main section.view5 {
     flex-direction: row;
-    font-size: 1vw;
+    font-size: 1rem;
   }
   main section.view5 .top,
   main section.view5 .bottom {
@@ -494,23 +495,23 @@ main section.view7 .bottom .foot h3 span {
     padding: 3.3rem;
   }
   main section.view5 .bottom .text h1 {
-    font-size: 3em;
-    width: 80%;
+    font-size: clamp(2rem, 3vw, 4.5rem);
+    width: 70%;
   }
   main section.view5 .bottom .text p {
-    font-size: 1.2em;
+    font-size: clamp(0.6em, 0.9vw, 1.2em);
     width: 50%;
   }
   main section.view6 {
     flex-direction: row;
-    font-size: 1vw;
+    font-size: 1rem;
     padding: 4.5rem;
   }
   main section.view6 .top {
     width: 80%;
   }
   main section.view6 .top h1 {
-    font-size: 5em;
+    font-size: clamp(3rem, 4vw, 5rem);
     line-height: 4.6rem;
     width: 80%;
   }
@@ -526,7 +527,7 @@ main section.view7 .bottom .foot h3 span {
   }
   main section.view7 {
     flex-direction: row;
-    font-size: 1vw;
+    font-size: 1rem;
   }
   main section.view7 .top {
     width: 20%;
@@ -544,7 +545,7 @@ main section.view7 .bottom .foot h3 span {
     width: 33%;
   }
   main section.view7 .bottom .links .navi h2 {
-    font-size: 1.5em;
+    font-size: clamp(1em, 1.2vw, 1.5em);
     opacity: 1;
     font-weight: 400;
   }
