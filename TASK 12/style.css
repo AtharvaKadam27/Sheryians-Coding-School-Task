@@ -381,6 +381,8 @@ main section.view7 .bottom .links .navi button {
   padding: 1rem;
   border-radius: 0.7rem;
   font-size: 1rem;
+  border: none;
+  outline: none;
 }
 main section.view7 .bottom .foot {
   background-color: rgb(37, 37, 37);
