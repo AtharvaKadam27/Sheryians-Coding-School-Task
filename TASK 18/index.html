@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <i class="ri-heart-fill"></i>
+    </div>
+    <script>
+      let heart = document.querySelector(".card i");
+      document.body.addEventListener("dblclick", () => {
+        heart.style.opacity = 1;
+        heart.style.transform = "translate(-50%, -50%) scale(1)";
+        setTimeout(() => {
+          heart.style.opacity = 0;
+          heart.style.transform = "translate(-50%, -50%) scale(0)";
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
