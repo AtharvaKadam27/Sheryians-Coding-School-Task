@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main-screen {
+  height: 94vh;
+  width: 100%;
+  background-image: url(./download.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.taskbar {
+  height: 6vh;
+  width: 100%;
+  background-color: #333;
+  padding: 3px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  width: 60%;
+  height: 100%;
+}
+
+.left {
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  height: 100%;
+  gap: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+.weather-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+}
+
+.middle .ri-microsoft-fill::before {
+  color: white;
+  height: 10px;
+  width: 40px;
+}
