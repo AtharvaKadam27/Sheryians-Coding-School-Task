@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+img {
+  height: 60px;
+  width: 60px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right a {
+  border-bottom: 2px solid black;
+}
+
+.right i {
+  font-size: 24px;
+}
