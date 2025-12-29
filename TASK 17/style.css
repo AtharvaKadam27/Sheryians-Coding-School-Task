@@ -23,6 +23,7 @@ img {
 
 .card {
   width: 275px;
+  overflow: hidden;
   margin: auto;
   background-color: white;
   display: flex;

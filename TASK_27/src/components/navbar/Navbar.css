@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.links {
+  display: flex;
+  /* gap: 25px; */
+}
+
+.links a {
+  color: black;
+  font-weight: 500;
+  padding: 15px;
+  background: transparent;
+  z-index: 10;
+}
+
+.links a:nth-child(1) {
+  anchor-name: --some-anchor;
+}
+
+.anchor-tag {
+  z-index: 1;
+  position-anchor: --some-anchor;
+  position: absolute;
+  top: anchor(top);
+  left: anchor(left);
+  right: anchor(right);
+  bottom: anchor(bottom);
+  background-color: #f1ed1c;
+  transition: all 0.3s linear;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.links a:hover {
+  anchor-name: --some-anchor;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}

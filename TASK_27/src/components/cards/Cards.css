@@ -1,0 +1,102 @@
+.cards-outer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 380px);
+  gap: 30px;
+}
+
+.card {
+  border-radius: 50px;
+  padding: 30px;
+}
+
+.div1 {
+  background-color: #0b1d37;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.div1 i {
+  font-size: 40px;
+  color: white;
+}
+
+.div1 h3 {
+  font-size: 33px;
+  color: white;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.div1 h3 span {
+  color: #95a3fe;
+}
+
+.div1 .radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.radio-btn {
+  height: 20px;
+  width: 40px;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: #95a3fe;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.div1 .radio-btn input {
+  border: none;
+  outline: none;
+  height: 25px;
+}
+
+.div2 {
+  background-image: url(https://adarshbhukele.github.io/ReactTask-2/photo2.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div2 button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+.div3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f4f2f2;
+}
+
+.div3 h1 {
+  font-size: 70px;
+  font-weight: 400;
+  color: black;
+}
+
+.div3 h3 {
+  font-size: 30px;
+  font-weight: 400;
+  color: black;
+}
+
+.div3 p {
+  font-size: 25px;
+  color: gray;
+  line-height: 28px;
+}
