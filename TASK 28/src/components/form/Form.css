@@ -1,0 +1,31 @@
+.form {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.289);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  width: 400px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
+
+form button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

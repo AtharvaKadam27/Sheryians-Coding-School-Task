@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+
+import "./App.css";
+import Form from "./components/form/Form.jsx";
+import Card from "./components/card/Card.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  let cardData = localStorage.getItem("cardData");
+  const [card, setCard] = useState(cardData ? JSON.parse(cardData) : []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app">
+      <Form card={card} setCard={setCard} />
+      <div className="card-section">
+        {card.map((data, index) => (
+          <Card
+            key={index}
+            name={data.name}
+            role={data.role}
+            description={data.description}
+            imageUrl={data.imageUrl}
+            setCard={setCard}
+          />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
