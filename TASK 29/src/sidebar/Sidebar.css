@@ -1,0 +1,69 @@
+.sidebar {
+  /* position: fixed;
+  top: 20px;
+  left: 20px; */
+  height: 100%;
+  width: 220px;
+  background-color: rgba(255, 255, 255, 0.073);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: gainsboro;
+}
+
+.sidebar i {
+  font-size: 16px;
+}
+
+.side-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 22px;
+}
+
+.logo i {
+  font-size: 22px;
+}
+
+.links {
+  display: flex;
+}
+.links:nth-child(4) {
+  border-bottom: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link p {
+  font-size: 14px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
