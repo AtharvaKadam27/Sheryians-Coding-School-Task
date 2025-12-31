@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+
+.inpt {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.143);
+  backdrop-filter: blur(10px);
+  padding: 8px 12px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.inpt i {
+  font-size: 16px;
+}
+
+.inpt input {
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.user i {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.169);
+  backdrop-filter: blur(10px);
+}

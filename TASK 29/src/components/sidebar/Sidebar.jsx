@@ -29,12 +29,8 @@ const Sidebar = () => {
         </div>
         <div className="links">
           <div className="link">
-            <i class="ri-video-on-line"></i>
+            <i class="ri-play-line"></i>
             <p>Continue Watching</p>
-          </div>
-          <div className="link">
-            <i class="ri-time-line"></i>
-            <p>Recently Watched</p>
           </div>
           <div className="link">
             <i class="ri-time-line"></i>

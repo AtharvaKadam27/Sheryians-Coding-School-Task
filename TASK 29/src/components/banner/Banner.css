@@ -1,0 +1,67 @@
+.banner {
+  background-image: url(./money_heist.jpg);
+  height: 55vh;
+  background-size: cover;
+  background-position: center;
+  margin: 20px 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  color: white;
+}
+
+.trend {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: fit-content;
+  padding: 8px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.genre {
+  display: flex;
+  gap: 5px;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.banner-content h4 {
+  width: 50%;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.watch-now-button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.watch-now-button button {
+  background-color: #deade7;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.watch-now-button button i {
+  padding: 0;
+  background-color: none;
+  backdrop-filter: blur(0);
+}
+
+.watch-now-button i {
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.078);
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
