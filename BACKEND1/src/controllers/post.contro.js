@@ -8,23 +8,6 @@ const client = new ImageKit({
 
 async function postCreateController(req, res) {
   try {
-    const token = req.cookies.token;
-    if (!token) {
-      return res.status(401).json({
-        success: false,
-        message: "Token not provided, Unauthorized access",
-      });
-    }
-    let decode = "";
-    try {
-      decode = jwt.verify(token, process.env.JWT_SECRET);
-    } catch (error) {
-      return res.status(401).json({
-        success: false,
-        message: "Invalid token, Unauthorized access",
-      });
-    }
-
     const file = await client.files.upload({
       file: await toFile(Buffer.from(req.file.buffer), "file"),
       fileName: "Test",
@@ -34,7 +17,7 @@ async function postCreateController(req, res) {
     const post = await postModel.create({
       caption: req.body.caption,
       imgUrl: file.url,
-      user: decode.id,
+      user: req.user.id,
     });
     res.status(201).json({
       success: true,
@@ -54,24 +37,7 @@ async function postCreateController(req, res) {
 
 async function getPostController(req, res) {
   try {
-    const token = req.cookies.token;
-    if (!token) {
-      return res.status(401).json({
-        success: false,
-        message: "Token not provided, Unauthorized access",
-      });
-    }
-    let decode = "";
-    try {
-      decode = jwt.verify(token, process.env.JWT_SECRET);
-    } catch (error) {
-      return res.status(401).json({
-        success: false,
-        message: "Invalid token, Unauthorized access",
-      });
-    }
-
-    const allPost = await postModel.find({ user: decode.id });
+    const allPost = await postModel.find({ user: req.user.id });
 
     res.status(200).json({
       success: true,
@@ -90,27 +56,10 @@ async function getPostController(req, res) {
 
 async function getPostDetailsController(req, res) {
   try {
-    const token = req.cookies.token;
-    if (!token) {
-      return res.status(401).json({
-        success: false,
-        message: "Token not provided, Unauthorized access",
-      });
-    }
-    let decode = "";
-    try {
-      decode = jwt.verify(token, process.env.JWT_SECRET);
-    } catch (error) {
-      return res.status(401).json({
-        success: false,
-        message: "Invalid token, Unauthorized access",
-      });
-    }
-
     const postId = req.params.postid;
     const postDetails = await postModel.findOne({
       _id: postId,
-      user: decode.id,
+      user: req.user.id,
     });
 
     if (!postDetails) {
