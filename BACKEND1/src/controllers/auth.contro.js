@@ -4,9 +4,9 @@ import jwt from "jsonwebtoken";
 
 async function register(req, res) {
   try {
-    const { name, email, password } = req.body;
+    const { username, email, password, bio, profileImage } = req.body;
     const userAlreadyExists = await User.findOne({
-      $or: [{ email }, { name }],
+      $or: [{ email }, { username }],
     });
 
     if (userAlreadyExists) {
@@ -15,7 +15,7 @@ async function register(req, res) {
           "User Already Exists" +
           (userAlreadyExists.email === email
             ? " with this Email"
-            : " with this Name"),
+            : " with this Username"),
       });
     }
 
@@ -25,9 +25,11 @@ async function register(req, res) {
       .digest("hex");
 
     const user = await User.create({
-      name,
+      username,
       email,
       password: hashedPassword,
+      bio,
+      profileImage,
     });
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
@@ -44,8 +46,10 @@ async function register(req, res) {
       message: "User Registered Successfully",
       user: {
         id: user._id,
-        name: user.name,
+        username: user.username,
         email: user.email,
+        bio: user.bio,
+        profileImage: user.profileImage,
       },
     });
   } catch (error) {
@@ -58,16 +62,15 @@ async function register(req, res) {
 
 async function login(req, res) {
   try {
-    const { email, name, password } = req.body;
-    if ((!email && !name) || !password) {
+    const { email, username, password } = req.body;
+    if ((!email && !username) || !password) {
       return res.status(400).json({
-        message: "Email/Name and Password are required",
+        message: "Email/Username and Password are required",
       });
     }
 
-    // Invalid username/email or password
     const user = await User.findOne({
-      $or: [{ email }, { name }],
+      $or: [{ email }, { username }],
     });
 
     if (!user) {
@@ -101,8 +104,10 @@ async function login(req, res) {
       message: "User Logged In Successfully",
       user: {
         id: user._id,
-        name: user.name,
+        username: user.username,
         email: user.email,
+        bio: user.bio,
+        profileImage: user.profileImage,
       },
     });
   } catch (error) {
