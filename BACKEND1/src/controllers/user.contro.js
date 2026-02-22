@@ -73,4 +73,87 @@ async function userUnFollowController(req, res) {
   }
 }
 
-export { userFollowController, userUnFollowController };
+async function userAllFollowRequestsController(req, res) {
+  try {
+    const username = req.user.username;
+    const allFollowRequests = await followModel.find({ following: username });
+    if (allFollowRequests.length === 0) {
+      return res.status(200).json({
+        success: true,
+        message: "No follow requests found",
+        allFollowRequests,
+      });
+    }
+    return res.status(200).json({
+      success: true,
+      message: "Follow requests fetched successfully",
+      allFollowRequests,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      success: false,
+      message: "Error fetching follow requests",
+      error: error.message,
+    });
+  }
+}
+
+async function userAcceptFollowRequestController(req, res) {
+  try {
+    const requestId = req.params.requestId;
+    const requestFollowStatus = req.body.followStatus;
+    if (!requestId) {
+      return res.status(400).json({
+        success: false,
+        message: "Request ID is required to accept or reject follow request",
+      });
+    }
+
+    const followRequest = await followModel.findOne({
+      _id: requestId,
+      following: req.user.username,
+    });
+    if (!followRequest) {
+      return res.status(404).json({
+        success: false,
+        message: "Follow request not found",
+      });
+    }
+    if (requestFollowStatus === "accepted") {
+      followRequest.requestStatus = "accepted";
+      await followRequest.save();
+      return res.status(200).json({
+        success: true,
+        message: "Follow request accepted",
+        followRequest,
+      });
+    } else if (requestFollowStatus === "rejected") {
+      await followModel.findByIdAndDelete(requestId);
+      return res.status(200).json({
+        success: true,
+        message: "Follow request rejected",
+      });
+    } else {
+      return res.status(400).json({
+        success: false,
+        message:
+          "Invalid status. Status must be either 'accepted' or 'rejected'",
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      success: false,
+      message: "Error accepting follow request",
+      error: error.message,
+    });
+  }
+}
+
+export {
+  userFollowController,
+  userUnFollowController,
+  userAllFollowRequestsController,
+  userAcceptFollowRequestController,
+};

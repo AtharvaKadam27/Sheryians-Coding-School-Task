@@ -5,8 +5,6 @@ async function postLike(req, res) {
     const postid = req.params.postid;
     const username = req.user.username;
 
-    console.log("Username:", username);
-
     const alreadyLiked = await likeModel.findOne({
       postId: postid,
       userName: username,
