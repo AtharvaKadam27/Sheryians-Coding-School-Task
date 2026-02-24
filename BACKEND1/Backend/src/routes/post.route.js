@@ -4,6 +4,7 @@ import {
   postCreateController,
   getPostController,
   getPostDetailsController,
+  getFeedController,
 } from "../controllers/post.contro.js";
 import userIdentity from "../middlewares/useridentity.js";
 
@@ -19,5 +20,6 @@ postRouter.post(
 );
 postRouter.get("/all", userIdentity, getPostController);
 postRouter.get("/details/:postid", userIdentity, getPostDetailsController);
+postRouter.get("/feed", userIdentity, getFeedController);
 
 export default postRouter;

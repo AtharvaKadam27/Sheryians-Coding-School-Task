@@ -15,7 +15,6 @@ app.use(
     credentials: true,
   }),
 );
-
 app.use("/api/auth", authRouter);
 app.use("/api/post", postRouter);
 app.use("/api/user", userRouter);
