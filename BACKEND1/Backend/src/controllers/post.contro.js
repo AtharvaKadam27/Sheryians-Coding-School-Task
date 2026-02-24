@@ -3,7 +3,7 @@ import postModel from "../models/post.model.js";
 import ImageKit, { toFile } from "@imagekit/nodejs";
 
 const client = new ImageKit({
-  privateKey: "private_+gsblrfYJsYSHs3AcfF5qiZis24=",
+  privateKey: "your api key",
 });
 
 async function postCreateController(req, res) {
