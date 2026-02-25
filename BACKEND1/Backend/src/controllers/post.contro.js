@@ -3,11 +3,7 @@ import ImageKit, { toFile } from "@imagekit/nodejs";
 import likeModel from "../models/like.model.js";
 
 const client = new ImageKit({
-<<<<<<< HEAD
-  privateKey: "private_rSo3GrjsZHD0gV08eyGXK3GjMy4=",
-=======
   privateKey: "your api key",
->>>>>>> c11a08ae7daec70773a6df3c7873cc0926a47ad6
 });
 
 async function postCreateController(req, res) {
