@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "./feature/shared/global.scss";
 import AppRoute from "./App.route";
 import { AuthContext } from "./feature/auth/AuthContext.jsx";
 import { PostContextProvider } from "./feature/post/post.context.jsx";

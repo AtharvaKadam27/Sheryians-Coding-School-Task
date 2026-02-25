@@ -3,7 +3,7 @@ import ImageKit, { toFile } from "@imagekit/nodejs";
 import likeModel from "../models/like.model.js";
 
 const client = new ImageKit({
-  privateKey: "your api key",
+  privateKey: "private_rSo3GrjsZHD0gV08eyGXK3GjMy4=",
 });
 
 async function postCreateController(req, res) {
@@ -89,7 +89,7 @@ async function getFeedController(req, res) {
     const user = req.user;
     const feed = await Promise.all(
       (await postModel.find({}).populate("user").lean()).map(async (post) => {
-        const isLiked = likeModel.findOne({
+        const isLiked = await likeModel.findOne({
           postId: post._id,
           userName: req.user.username,
         });

@@ -1,11 +1,18 @@
 import React from "react";
 
-const Post = ({ user, post }) => {
+const Post = ({ user, post, handleLikePost, handleUnlikePost }) => {
   return (
     <div className="post">
       <div className="user">
         <div className="img-wrapper">
-          <img src={user.profileImage} alt="" />
+          <img
+            src={
+              user.profileImage
+                ? user.image
+                : "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+            }
+            alt=""
+          />
         </div>
         <p>{user.username}</p>
       </div>
@@ -15,6 +22,11 @@ const Post = ({ user, post }) => {
           <button>
             <svg
               className={post.isLiked ? "like" : ""}
+              onClick={() => {
+                post.isLiked
+                  ? handleUnlikePost(post._id)
+                  : handleLikePost(post._id);
+              }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
