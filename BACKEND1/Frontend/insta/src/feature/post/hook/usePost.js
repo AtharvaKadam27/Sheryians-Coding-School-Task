@@ -1,5 +1,6 @@
 import { PostContext } from "../post.context.jsx";
 import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   createPost,
   getFeed,
@@ -9,15 +10,20 @@ import {
 
 const usePost = () => {
   const context = useContext(PostContext);
+  const navigate = useNavigate();
 
   const { loading, setLoading, post, setPost, feed, setFeed } = context;
 
   const handleGetFeed = async () => {
     setLoading(true);
-    const data = await getFeed();
-    console.log(data);
-    setFeed(data.posts);
-    setLoading(false);
+    try {
+      const data = await getFeed();
+      setFeed(data.posts);
+    } catch (error) {
+      navigate("/login");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleCreatePost = async (caption, postIamge) => {
