@@ -33,7 +33,7 @@ async function uploadSong(req, res) {
 
 async function getSongsByMood(req, res) {
   const mood = req.query.mood;
-  const songs = await songModel.find({ mood });
+  const songs = await songModel.findOne({ mood });
   return res.status(200).json({
     message: "Songs fetched successfully",
     songs,
