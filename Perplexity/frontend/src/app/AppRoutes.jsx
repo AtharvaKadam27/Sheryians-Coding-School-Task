@@ -1,0 +1,27 @@
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "../features/auth/pages/Login";
+import Register from "../features/auth/pages/Register";
+import Dashboard from "../features/chat/pages/Dashboard";
+import Protected from "../features/auth/components/Protected";
+
+const AppRoutes = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Protected>
+              <Dashboard />
+            </Protected>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default AppRoutes;
